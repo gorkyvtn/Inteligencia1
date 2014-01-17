@@ -1,0 +1,198 @@
+<head> 
+<script type='text/javascript' src='scripts/jquery-1.5.1.min.js'></script>
+<link rel="stylesheet" type="text/css" href="css/estilo.css">
+<link rel="stylesheet" type="text/css" href="css/verde.css">
+<link rel="stylesheet" type="text/css" href="css/rojo.css">
+<link rel="stylesheet" type="text/css" href="css/amarillo.css">
+<link rel="stylesheet" type="text/css" href="css/azul.css">
+<link rel="stylesheet" type="text/css" href="css/aumentarFuente.css">
+<link rel="stylesheet" type="text/css" href="css/disminuirFuente.css">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Tabla1</title>
+<script language="javascript" type="text/javascript" >
+	
+function buscarPorVoz()
+			{
+			 var variable = $("#sss").val();
+			  //alert(variable);
+
+			  switch (variable) {
+                    case ("verde"):
+                        $('#target' ).removeClass('rojo');
+		  				$('#target' ).removeClass('azul');
+		 				$('#target' ).removeClass('amarillo');
+						$('#target' ).removeClass('aumentarFuente');
+		 				$('#target' ).removeClass('disminuirFuente');
+		  
+		  				$('#target' ).addClass('verde'); 
+                        break;
+                    case ("rojo"):
+                       	$('#target' ).removeClass('amarillo');
+						  $('#target' ).removeClass('verde');
+						  $('#target' ).removeClass('azul');
+						  $('#target' ).removeClass('aumentarFuente');
+						 $('#target' ).removeClass('disminuirFuente');
+		  
+		  				$('#target' ).addClass('rojo');
+                        break;
+                    case ("azul"):
+              		 	$('#target' ).removeClass('verde');
+						  $('#target' ).removeClass('rojo');
+						  $('#target' ).removeClass('amarillo');
+						  $('#target' ).removeClass('aumentarFuente');
+						 $('#target' ).removeClass('disminuirFuente');
+						  
+						  $('#target' ).addClass('azul');
+                        break;
+                    case ("amarillo"):
+              		 	$('#target' ).removeClass('verde');
+						 $('#target' ).removeClass('rojo');
+						 $('#target' ).removeClass('azul');
+						 $('#target' ).removeClass('aumentarFuente');
+						 $('#target' ).removeClass('disminuirFuente');
+						 
+						  $('#target' ).addClass('amarillo');
+                        break;    
+                    case ("grande"):
+              		 	 $('#target' ).removeClass('verde');
+						  $('#target' ).removeClass('rojo');
+						  $('#target' ).removeClass('azul');
+						  $('#target' ).removeClass('amarillo');
+						  $('#target' ).removeClass('disminuirFuente');
+						   $('#target' ).addClass('aumentarFuente');
+                        break;
+                    case ("pequeño"):
+              		 	$('#target' ).removeClass('verde');
+						  $('#target' ).removeClass('rojo');
+						  $('#target' ).removeClass('azul');
+						  $('#target' ).removeClass('amarillo');
+						  $('#target' ).removeClass('aumentarFuente');
+						   $('#target' ).addClass('disminuirFuente');
+                        break;
+                    default:
+                        
+                }
+
+			}
+	$(document).ready(function() {
+
+			
+
+		$('#idVerde').click(function() {
+		  //alert('Hola Mundo');
+		  $('#target' ).removeClass('rojo');
+		  $('#target' ).removeClass('azul');
+		  $('#target' ).removeClass('amarillo');
+		  $('#target' ).removeClass('aumentarFuente');
+		 $('#target' ).removeClass('disminuirFuente');
+		  
+		  $('#target' ).addClass('verde'); 
+
+		 });
+		 
+		 
+		 
+		 $('#idRojo').click(function() {
+		  //alert('Hola Mundo');
+		  $('#target' ).removeClass('amarillo');
+		  $('#target' ).removeClass('verde');
+		  $('#target' ).removeClass('azul');
+		  $('#target' ).removeClass('aumentarFuente');
+		 $('#target' ).removeClass('disminuirFuente');
+		  
+		  $('#target' ).addClass('rojo');
+		 });
+		  
+		  
+		  
+		  $('#idAzul').click(function() {
+		  //alert('Hola Mundo');
+		  $('#target' ).removeClass('verde');
+		  $('#target' ).removeClass('rojo');
+		  $('#target' ).removeClass('amarillo');
+		  $('#target' ).removeClass('aumentarFuente');
+		 $('#target' ).removeClass('disminuirFuente');
+		  
+		  $('#target' ).addClass('azul');
+		 });
+		 
+		 
+		 
+		 $('#idAmarillo').click(function() {
+		  //alert('Hola Mundo');
+		 $('#target' ).removeClass('verde');
+		 $('#target' ).removeClass('rojo');
+		 $('#target' ).removeClass('azul');
+		 $('#target' ).removeClass('aumentarFuente');
+		 $('#target' ).removeClass('disminuirFuente');
+		 
+		  $('#target' ).addClass('amarillo');
+		 });
+		 
+		  
+
+		 
+		 
+		 
+		   $('#idGrande').click(function() {
+		  //alert('Hola Mundo');
+		  
+		  $('#target' ).removeClass('verde');
+		  $('#target' ).removeClass('rojo');
+		  $('#target' ).removeClass('azul');
+		  $('#target' ).removeClass('amarillo');
+		  $('#target' ).removeClass('disminuirFuente');
+		 /*
+		  var tamaño = $('#target').css('font-size');
+		  alert('el tamano es '+ tamaño);
+		  */
+		   $('#target' ).addClass('aumentarFuente');
+		  
+		 });
+		 
+		 
+		 
+		  $('#idpequeño').click(function() {
+		  //alert('Hola Mundo');
+		  $('#target' ).removeClass('verde');
+		  $('#target' ).removeClass('rojo');
+		  $('#target' ).removeClass('azul');
+		  $('#target' ).removeClass('amarillo');
+		  $('#target' ).removeClass('aumentarFuente');
+		 /* 
+		  var tamaño = $('#target').css('font-size');
+		  alert('el tamano es '+ tamaño);
+		  */
+		   $('#target' ).addClass('disminuirFuente');
+		  
+		 });
+		 
+		 
+		 
+		 
+		  
+	})
+</script>
+</head>
+
+<body>
+	<p>Tratare de explicar, en esta pagina se usa el reconocimiento de voz, por tanto puede hacer click sobre los links para cambiar color de fondo o tamaño de las letras, o decir los enunciados para que se cumplan, claro previamente presionando sobre el icono de microfono en el campo de texto</p>
+	<input type="text" name="s" id="sss" x-webkit-speech=""  speech error onwebkitspeechchange="buscarPorVoz()">
+<p>.</p>
+	<p><a href="#" id="idVerde">Verde</a></p>
+	<p><a href="#" id="idRojo">Rojo</a></p>
+	<p><a href="#" id="idAzul">Azul</a></p>
+	<p><a href="#" id="idAmarillo" >Amarillo</a></p>
+	<p><a href="#"id="idGrande" >Agrandar Letra(grande)</a></p>
+	<p><a href="#"id="idpequeño" >Achicar Letra (pequeño) </a></p>
+	<div id="target">
+	  uso del reconocimiento por voz, sobre este texto!!
+	</div>
+	
+  
+
+
+
+</body>
+</html>
